@@ -3,8 +3,10 @@ import debounce from 'lodash.debounce';
 import { PNotify, pWarning } from './utils/pnotify';
 import { getCountry } from './services/api';
 import { refs } from './utils/refs';
+
 import templateList from './utils/templates/list-item.hbs';
 import templateCard from './utils/templates/country-description.hbs';
+
 
 //getCountry('ukr').then(data => console.log(data));
 
@@ -13,6 +15,7 @@ refs.input.addEventListener('input', debounce(getInputValue, 500));
 function getInputValue(event) {
   event.preventDefault();
   const { target } = event;
+
   if (event.target.value === "") {
     return;
   }
@@ -28,6 +31,7 @@ function getInputValue(event) {
     }
     //else{pWarning('Sorry, we can\'t find, try again!')};
   }).catch(error => console.error(error));;
+
 }
 
 function updateHtml(data) {

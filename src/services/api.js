@@ -5,5 +5,6 @@ const getCountry = country =>
     .then(response => response.json())
   // .then(country => Array.from(country))
     .catch(console.log('Error!'));
+};
 
 export { getCountry };
