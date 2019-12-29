@@ -1,0 +1,28 @@
+<div class="card-item">
+    <h2 class="card-title">{{name}}</h2>
+    <div class="card-content">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="card-discr">Capital:</td>
+                    <td>{{capital}}</td>
+                </tr>
+                <tr>
+                    <td class="card-discr">Population:</td>
+                    <td>{{population}}</td>
+                </tr>
+                <tr>
+                    <td class="card-discr">Languages:</td>
+                    <td><ul>{{#each languages}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                       </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card-img">
+            <img src="{{flag}}" alt="flag of {{name}}" width='480'>
+        </div>
+    </div>
+</div>
